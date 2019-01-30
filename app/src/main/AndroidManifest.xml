@@ -28,12 +28,12 @@
         <!-- hockey id included from build.gradle manifest placeholder -->
         <meta-data android:name="net.hockeyapp.android.appIdentifier" android:value="${HOCKEYAPP_APP_ID}" />
 
-        <activity android:name="dk.nodes.template.presentation.ui.main.MainActivity">
+        <activity android:name="dk.nodes.template.screens.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".presentation.ui.main.SampleActivity" />
+        <activity android:name="dk.nodes.template.screens.main.SampleActivity" />
     </application>
 </manifest>

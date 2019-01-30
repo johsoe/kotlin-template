@@ -4,11 +4,11 @@ import androidx.lifecycle.ViewModelProvider
 import dagger.Binds
 import dagger.Module
 import dk.nodes.template.injection.DaggerViewModelFactory
-import dk.nodes.template.presentation.ui.main.MainActivityBuilder
 
 @Module(
     includes = [
-        MainActivityBuilder::class
+        ViewModelModule::class,
+        ActivityBindingsModule::class
     ]
 )
 internal abstract class ViewModelBuilder {

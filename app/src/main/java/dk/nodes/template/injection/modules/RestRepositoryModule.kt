@@ -5,7 +5,6 @@ import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import dk.nodes.arch.domain.injection.scopes.AppScope
-import dk.nodes.template.domain.repositories.PostRepository
 import dk.nodes.template.network.rest.Api
 import dk.nodes.template.network.rest.RestPostRepository
 

@@ -97,10 +97,7 @@ repositories {
 dependencies {
     def kotlinx_coroutines_version = '1.0.1',
         constraint_layout_version = '2.0.0-alpha2',
-        dagger_version = "2.16",
-        lifecycle_version = "2.0.0",
         hockey_sdk_version = "5.1.0",
-        timber_version = "4.7.1",
         junit_version = '4.12',
         espresso_core_version = '3.1.0',
         mockito_version = '2.7.22',
@@ -111,8 +108,7 @@ dependencies {
         rx_android_version = '2.1.0',
         rx_java_version = "2.2.4",
         rx_kolin_version = "2.2.0",
-        ktx_version = "1.0.1",
-        rx_lint_version = '1.7.0'
+        ktx_version = "1.0.1"
 
     fileTree(dir: "libs", include: ["*.jar"])
     androidTestImplementation("androidx.test.espresso:espresso-core:$espresso_core_version", {
@@ -131,13 +127,12 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
     implementation 'androidx.multidex:multidex:2.0.1'
 
-    implementation "com.google.dagger:dagger-android:$dagger_version"
-    implementation "com.google.dagger:dagger-android-support:$dagger_version"
-    kapt "com.google.dagger:dagger-compiler:$dagger_version"
-    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+    implementation "com.google.dagger:dagger-android:2.21"
+    implementation "com.google.dagger:dagger-android-support:2.21"
+    kapt "com.google.dagger:dagger-compiler:2.21"
+    kapt "com.google.dagger:dagger-android-processor:2.21"
 
     implementation "net.hockeyapp.android:HockeySDK:$hockey_sdk_version"
-    implementation "com.jakewharton.timber:timber:$timber_version"
 
     implementation("com.squareup.retrofit2:retrofit:$retrofit_version")
     implementation("com.squareup.retrofit2:converter-gson:$retrofit_version") {
@@ -169,12 +164,14 @@ dependencies {
     // The following section is only used to force the latest version to resolve conflicts
     implementation 'androidx.arch.core:core-common:2.0.0'
     implementation 'androidx.arch.core:core-runtime:2.0.1-alpha01'
-    implementation "androidx.lifecycle:lifecycle-livedata-core:$lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-common:$lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
-    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
-    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-livedata-core:2.0.0"
+    implementation "androidx.lifecycle:lifecycle-runtime:2.0.0"
+    implementation "androidx.lifecycle:lifecycle-common:2.0.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.0.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.0.0"
+    implementation "androidx.lifecycle:lifecycle-livedata:2.0.0"
+    kapt "androidx.lifecycle:lifecycle-compiler:2.0.0"
     implementation "androidx.core:core-ktx:$ktx_version"
+
+    implementation project(":domain")
 }
